@@ -49,7 +49,7 @@
 }
 
 .section-header .img-question {
-    width: 48%;
+    width: 35%;
     animation-name: rotateimg;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -61,6 +61,10 @@
         transform: rotate(360deg);
     }
 }
+
+.time{
+    text-align: center;
+  }
 
 .section-header .title-question {
     font-size: 20px;
@@ -74,7 +78,6 @@
     height: 65vh;
     padding: 10px;
 }
-
 
 
 .section-answer .answer-form {
