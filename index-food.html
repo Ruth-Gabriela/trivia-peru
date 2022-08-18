@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionario-Comida</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-question.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="container-question">
+      <section class="section-header">
+        <img src="https://i.imgur.com/8RgZdbK.png" alt="" class="img-question">
+        <h2 class="title-question">Comida Peruana</h2>
+        <p>Responde las preguntas antes que termine el Tiempo:</p>
+        <span class="title-count" id="cuentaRegresiva"></span>
+      </section>
+
+      <section class="section-answer" id="question1">
+        <span id="countdown"></span>
+        <div class="answer-form">
+          <h3> Pregunta N°1</h3>
+          <p class="question">1: Cúal es un plato reconocido mundialmente</p>
+          <button class="answer correct" onclick="question2('correct');">Saltado</button>
+          <button class="answer incorrect" onclick="question2();">Arroz con pollo</button>
+          <button class="answer incorrect" onclick="question2();">Estofado de res</button>
+          <button class="answer incorrect" onclick="question2();">El ají con gallina</button>
+        </div>
+      </section>
+
+      <section class="section-answer" id="question2">
+        <div class="answer-form">
+          <h3> Pregunta N°2</h3>
+          <p class="question">2: ¿Cual es el plato tipico en la sierra del Perú?</p>
+          <button class="answer incorrect" onclick="question3()" ;>Salchipollo</button>
+          <button class="answer incorrect" onclick="question3()">Ceviche</button>
+          <button class="answer correct" onclick="question3('correct')">Pachamanca</button>
+          <button class="answer incorrect" onclick="question3()">Chicharron</button>
+        </div>
+      </section>
+
+      <section class="section-answer" id="question3">
+        <div class="answer-form">
+          <h3> Pregunta N°3</h3>
+          <p class="question">3: En que región del Perú se encuentra el plato típico "CEZINA"</p>
+          <button class="answer incorrect" onclick="seeResult();" ;>Costa</button>
+          <button class="answer correct" onclick="seeResult(`correct`);">Selva</button>
+          <button class="answer incorrect" onclick="seeResult();">Sierra</button>
+          <button class="answer incorrect" onclick="seeResult();">Mar Peruano</button>
+        </div>
+      </section>
+
+
+      <div class="section-answer" id="result">
+        <div class="answer-form">
+
+          <div id="answer-question">
+            <h3 class="h3"> LAS RESPUESTAS CORRECTAS SON </h3>
+            <div class="answer-question">
+              <p class="parraf">Pregunta 1: Saltado<br>
+                Pregunta 2: Pachamanca<br>
+                Pregunta 3: Selva</p>
+            </div>
+          </div>
+
+          <h3 class="h3">Obtuviste aciertos: </h3>
+          <!-- en este elemento p vamos a agregar el numero de aciertos -->
+          <p id="correct" class="p"></p>
+          <h3 class="h3">Obtuviste desaciertos:</h3>
+          <!-- en este elemento p vamos a agregar el numero de desaciertos -->
+          <p id="incorrect" class="p"></p>
+          <!-- en este elemento p vamos un texto si tiene más aciertos que desaciertos y viceversa -->
+          <p id="text" class="p"></p>
+
+          <button class="button-next" id="buttonGoCategory" type="button" name="button"
+            onclick="location.href='categorias.html'">Jugar otra vez</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="script-questions.js"></script>
+</body>
+
+</html>

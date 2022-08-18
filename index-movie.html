@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionario-Cine</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-question.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="container-question">
+      <section class="section-header">
+        <img src="https://i.imgur.com/bkE0s8d.png" alt="" class="img-question">
+        <h2 class="title-question">Cine Peruano</h2>
+        <p>Responde las preguntas antes que termine el Tiempo:</p>
+        <span class="title-count" id="cuentaRegresiva"></span>
+      </section>
+
+      <section class="section-answer" id="question1">
+        <span id="countdown"></span>
+        <div class="answer-form">
+          <h3> Pregunta N°1</h3>
+          <p class="question">1: Es catalogada como la mejor película realizada por el legendario Armando Robles Godoy
+          </p>
+          <button class="answer incorrect" onclick="question2();">Días de Santiago(2004)</button>
+          <button class="answer incorrect" onclick="question2();">El Retablo(2017)</button>
+          <button class="answer correct" onclick="question2('correct');">La muralla verde (1969)</button>
+          <button class="answer incorrect" onclick="question2();">Antuca(2018)</button>
+        </div>
+      </section>
+
+      <section class="section-answer" id="question2">
+        <div class="answer-form">
+          <h3> Pregunta N°2</h3>
+          <p class="question">2: Por quién está dirigida la pelicula "La boca del lobo (1987)""</p>
+          <button class="answer incorrect" onclick="question3()" ;>Magdyel Ugaz</button>
+          <button class="answer correct" onclick="question3('correct')">Los Hermanos Vega</button>
+          <button class="answer incorrect" onclick="question3()">Patricia Roncal Zuñiga</button>
+          <button class="answer incorrect" onclick="question3()">Fiódor Dostoyevski</button>
+        </div>
+      </section>
+
+      <section class="section-answer" id="question3">
+        <div class="answer-form">
+          <h3> Pregunta N°3</h3>
+          <p class="question">3: La pelicula "La hora azul (2014)" está basada en la novela del escritor:</p>
+          <button class="answer incorrect" onclick="seeResult();" ;>Vitín Luna</button>
+          <button class="answer incorrect" onclick="seeResult();">Giovanni Ciccia</button>
+          <button class="answer incorrect" onclick="seeResult();">Adrián Ormache</button>
+          <button class="answer correct" onclick="seeResult(`correct`);">Alonso Cueto</button>
+        </div>
+      </section>
+
+
+      <div class="section-answer" id="result">
+        <div class="answer-form">
+          <div id="answer-question">
+            <h3 class="h3"> LAS RESPUESTAS CORRECTAS SON </h3>
+            <div class="answer-question">
+              <p class="parraf">Pregunta 1: La muralla verde (1969)<br>
+                Pregunta 2: Los Hermanos Vega<br>
+                Pregunta 3: Alonso Cueto</p>
+            </div>
+          </div>
+
+          <h3 class="h3">Obtuviste aciertos: </h3>
+          <!-- en este elemento p vamos a agregar el numero de aciertos -->
+          <p id="correct" class="p"></p>
+          <h3 class="h3">Obtuviste desaciertos:</h3>
+          <!-- en este elemento p vamos a agregar el numero de desaciertos -->
+          <p id="incorrect" class="p"></p>
+          <!-- en este elemento p vamos un texto si tiene más aciertos que desaciertos y viceversa -->
+          <p id="text" class="p"></p>
+
+          <button class="button-next" id="buttonGoCategory" type="button" name="button"
+            onclick="location.href='categorias.html'">Jugar otra vez</button>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+  <script src="script-questions.js"></script>
+</body>
+
+</html>

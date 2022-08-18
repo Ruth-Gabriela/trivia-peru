@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container-question,
+  .container-img,
+  .container-question,
+  .form-question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-question{
+    width: 100%;
+      height: 100vh;
+      background-color: #ffffff;
+      background-image:  linear-gradient(135deg, #f9f9f9 25%, transparent 25%), linear-gradient(225deg, #f9f9f9 25%, transparent 25%), linear-gradient(45deg, #f9f9f9 25%, transparent 25%), linear-gradient(315deg, #f9f9f9 25%, #ffffff 25%);
+      background-position:  23px 0, 23px 0, 0 0, 0 0;
+      background-size: 46px 46px;
+      background-repeat: repeat;
+  }
+  
+  
+  .container-img{
+      justify-content: center;
+      width: 100%;
+      height: 55vh;
+      padding: 20px 10px;
+      background: #00ADE6;
+      border-radius: 0 0 100% 100% / 18%;
+      color: white;
+      gap: 10px
+  }
+  
+  .img-cholita{
+    width: 45%;
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce {
+    0%{
+      transform: skewY(-4deg);
+    }
+    50%{
+      transform: skewX(8deg);
+    }
+    100%{
+      transform: skewY(-4deg);
+    }
+  }
+      
+  
+  .title{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  
+  .text{
+    font-size: 20px;
+  }
+  
+  .form-question{
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    gap: 20px
+  }
+  
+  .button{
+    width: 300px;
+    font-size: 16px;
+    padding: 15px 25px;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 3px 3px 5px 0px rgba(43,43,43,0.35);
+    transition: 0.4s linear;
+    cursor: pointer;
+  }
+  
+  .button:hover{
+    background: #A7242D;
+    color: white;
+    transition: ease 0.5s;
+  }
+  
+  @media (min-width:600px) {
+      .container-question{
+          flex-direction: row;
+      }
+      .container-img{
+          justify-content: center;
+          flex: 0 0 55%;
+          height: 100vh;
+          border-radius: 0 80% 80% 0 / 100%;
+      }
+  }
+  

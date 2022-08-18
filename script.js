@@ -4,16 +4,57 @@ const inputName = document.getElementById("input-form");
 /*Optenemos los datos del modal*/
 const modal = document.getElementById("modal"); //modal
 const titleModal = document.getElementById("title-modal"); //modal title
+
+//Obtenemos el evento del Boton
+buttonEnter.addEventListener("click", validateName);
+
+function validateName(event) {
+  event.preventDefault(); //evitar que se actualice la página
+  let nombreJugador = `${inputName.value}`
+
+  if (inputName.value.trim() === "") {
+    //No escribio su nombre y le mandamos modal de error
+    alert("Ingresa tu nombre");
+  }
+  else {
+    //Si escribio su nombre y le damos la modal de bienvenida
+    titleModal.innerHTML = nombreJugador;
+    modal.classList.remove("modalHide");// oculta la clase el modal
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const buttonEnter = document.getElementById("button-form");
+const inputName = document.getElementById("input-form");*/
+
+/*Optenemos los datos del modal*/
+/*const modal = document.getElementById("modal"); //modal
+const titleModal = document.getElementById("title-modal"); //modal title
 const textModal = document.getElementById("text-modal"); //modal text
 const textButton = document.getElementById("close-modal"); //modal Button Text
-const imgModal = document.getElementById("img-modal");
+const imgModal = document.getElementById("img-modal");*/
 
 /*Creamos un objeto*/
-const alerts = {
+/*const alerts = {
     welcome:{
         text: "Bienvenido al Juego",
         img: "https://i.imgur.com/rFcZFue.png",
-        url: "./categorias222222.html",
+        url: "./categorias.html",
         textButton: "Siguiente"
     },
     errorWelcome:{
@@ -31,7 +72,7 @@ buttonEnter.addEventListener("click", validateName);
 function validateName(event) {
     event.preventDefault();
     
-    if(inputName.value === ""){
+    if(inputName.value.trim() === ""){
         //No escribio su nombre y le mandamos modal de error
         showModal("error");
     }
@@ -57,6 +98,6 @@ function showModal(type){
         imgModal.src = alerts.welcome["img"];
     }
     modal.classList.remove("modalHide");
-} 
+} */
 
 

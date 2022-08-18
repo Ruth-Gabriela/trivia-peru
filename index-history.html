@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionario-Historia</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-question.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="container-question">
+      <section class="section-header">
+        <img src="https://i.imgur.com/UqJV3ts.png" alt="" class="img-question">
+        <h2 class="title-question">Historia Peruana</h2>
+        <p>Responde las preguntas antes que termine el Tiempo:</p>
+        <span class="title-count" id="cuentaRegresiva"></span>
+      </section>
+
+      <section class="section-answer" id="question1">
+
+        <div class="answer-form">
+          <h3> Pregunta N°1</h3>
+          <p class="question">1: Quién Descubrió Machu Picchu</p>
+          <button class="answer incorrect" onclick="question2();">Julio Csar Tello</button>
+          <button class="answer incorrect" onclick="question2();">Pedro A. Labarth</button>
+          <button class="answer correct" onclick="question2('correct');">Hiram Bingham</button>
+          <button class="answer incorrect" onclick="question2();"> Garcilazo de la vega</button>
+        </div>
+      </section>
+
+      <section class="section-answer" id="question2">
+        <div class="answer-form">
+          <h3> Pregunta N°2</h3>
+          <p class="question">2: ¿A qué cultura precolombina pertenecen las cabezas clavas?</p>
+          <button class="answer incorrect" onclick="question3()" ;>Lauricocha</button>
+          <button class="answer correct" onclick="question3('correct');">Chavin</button>
+          <button class="answer incorrect" onclick="question3();">Mochica</button>
+          <button class="answer incorrect" onclick="question3();">Paracas</button>
+        </div>
+      </section>
+
+      <section class="section-answer" id="question3">
+        <div class="answer-form">
+          <h3> Pregunta N°3</h3>
+          <p class="question">3: ¿Cuál es el río más grande y caudaloso del Perú</p>
+          <button class="answer incorrect" onclick="seeResult();" ;>Santa</button>
+          <button class="answer correct" onclick="seeResult(`correct`);">Amazonas</button>
+          <button class="answer incorrect" onclick="seeResult();">Marañon</button>
+          <button class="answer incorrect" onclick="seeResult();">Vilcanota</button>
+        </div>
+      </section>
+
+
+      <div class="section-answer" id="result">
+        <div class="answer-form">
+          <div id="answer-question">
+            <h3 class="h3"> LAS RESPUESTAS CORRESTAS SON </h3>
+            <div class="answer-question">
+              <p class="parraf">Pregunta 1: Hiram Bingham<br>
+                Pregunta 2: Chavin<br>
+                Pregunta 3: Amazonas</p>
+            </div>
+          </div>
+
+          <h3 class="h3">Obtuviste aciertos: </h3>
+          <!-- en este elemento p vamos a agregar el numero de aciertos -->
+          <p id="correct" class="p"></p>
+          <h3 class="h3">Obtuviste desaciertos:</h3>
+          <!-- en este elemento p vamos a agregar el numero de desaciertos -->
+          <p id="incorrect" class="p"></p>
+          <!-- en este elemento p vamos un texto si tiene más aciertos que desaciertos y viceversa -->
+          <p id="text" class="p"></p>
+
+          <button class="button-next" id="buttonGoCategory" type="button" name="button"
+            onclick="location.href='categorias.html'">Jugar otra vez</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script src="script-questions.js"></script>
+</body>
+
+</html>
